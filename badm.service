@@ -1,0 +1,16 @@
+[Unit]
+Description=Badm Vue Dev Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/ubuntu/liulianshidai/badm
+ExecStart=/home/ubuntu/.nvm/versions/node/v20.19.2/bin/npm run dev
+Restart=always
+RestartSec=3
+User=ubuntu
+Environment=NODE_ENV=development
+Environment=PATH=/home/ubuntu/.nvm/versions/node/v20.19.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+[Install]
+WantedBy=multi-user.target 
